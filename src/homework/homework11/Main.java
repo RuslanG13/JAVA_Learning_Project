@@ -21,26 +21,26 @@ public class Main {
          * …
          */
 
-        Human granny1 = new Human("Anastasia", "Female", 70);
-        Human grandFather1 = new Human("Gleb", "Male", 73);
+        Human granny1 = new Human("Anastasia", true, 70);
+        Human grandFather1 = new Human("Gleb", true, 73);
 
-        Human granny2 = new Human("Antonina", "Female", 69);
-        Human grandFather2 = new Human("Griroryi", "Male", 74);
+        Human granny2 = new Human("Antonina", false, 69);
+        Human grandFather2 = new Human("Griroryi", true, 74);
 
-        Human mother = new Human("Veronika", "Female", 45, grandFather1, granny1);
-        Human father = new Human("Nikolai", "Male", 48, grandFather2, granny2);
+        Human mother = new Human("Veronika", false, 45, grandFather1, granny1);
+        Human father = new Human("Nikolai", true, 48, grandFather2, granny2);
 
-        Human boy = new Human("Ivan", "Male", 23, father, mother);
-        Human girl = new Human("Katya", "Female", 22, father, mother);
+        Human boy = new Human("Ivan", true, 23, father, mother);
+        Human girl = new Human("Katya", false, 22, father, mother);
 
-//        System.out.println(granny1.toString());
-//        System.out.println(grandFather1.toString());
-//        System.out.println(granny2.toString());
-//        System.out.println(grandFather2.toString());
-//        System.out.println(father.toString());
-//        System.out.println(mother.toString());
-//        System.out.println(girl.toString());
-//        System.out.println(boy.toString());
+        System.out.println(granny1.toString());
+        System.out.println(grandFather1.toString());
+        System.out.println(granny2.toString());
+        System.out.println(grandFather2.toString());
+        System.out.println(father.toString());
+        System.out.println(mother.toString());
+        System.out.println(girl.toString());
+        System.out.println(boy.toString());
 
         /**
          В методе initializeArray():
