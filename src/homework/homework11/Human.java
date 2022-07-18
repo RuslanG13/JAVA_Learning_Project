@@ -15,12 +15,12 @@ package homework.homework11;
 public class Human {
 
     private String name;
-    private String gender;
+    private boolean gender;
     private int age;
     private Human father;
     private Human mother;
 
-    public Human(String name, String gender, int age, Human father, Human mother) {
+    public Human(String name, boolean gender, int age, Human father, Human mother) {
         this.name = name;
         this.gender = gender;
         this.age = age;
@@ -28,7 +28,7 @@ public class Human {
         this.mother = mother;
     }
 
-    public Human(String name, String gender, int age) {
+    public Human(String name, boolean gender, int age) {
         this.name = name;
         this.gender = gender;
         this.age = age;
@@ -37,9 +37,10 @@ public class Human {
     @Override
     public String toString() {
         if(this.father != null && this.mother != null) {
-            return "Имя: " +  name +  " пол: " +  gender +  " возраст: "  + age +  " отец: " +  father.name  + " мать: " + mother.name;
+            return "Имя: " +  this.name +  " пол: " +  (this.gender? "мужской" : "женский") +  " возраст: "  + this.age +
+                    " отец: " +  this.father.name  + " мать: " + this.mother.name;
         } else{
-            return "Имя: " +  name +  " пол: " +  gender +  " возраст: "  + age;
+            return "Имя: " +   this.name +  " пол: " +  (this.gender ? "мужской" : "женский") +  " возраст: "  + this.age;
         }
     }
 }
